@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Ella's Game Portal</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Press Start 2P', cursive;
+            background-color: #000;
+            color: #0ff;
             margin: 0;
-            color: #333;
+            padding: 0;
         }
 
         header {
-            background: linear-gradient(90deg, #007bff, #00bcd4);
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
             color: white;
             text-align: center;
             padding: 2rem 0;
+            border-bottom: 5px solid #0ff;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0;
+            text-shadow: 2px 2px #000;
         }
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background: #111;
+            box-shadow: 0 5px 10px rgba(0, 255, 255, 0.5);
         }
 
         .w3-bar {
@@ -42,11 +45,13 @@
             font-weight: bold;
             padding: 1rem;
             text-transform: uppercase;
+            color: #0ff;
+            text-shadow: 1px 1px #000;
             transition: background 0.3s, color 0.3s;
         }
 
         .w3-bar-item:hover {
-            background: #007bff;
+            background: #ff00ff;
             color: white;
         }
 
@@ -54,15 +59,17 @@
             margin: 2rem auto;
             max-width: 900px;
             padding: 2rem;
-            background: white;
+            background: #222;
+            border: 3px solid #0ff;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5);
         }
 
         section h2 {
-            color: #007bff;
-            font-size: 1.8rem;
+            color: #ff00ff;
+            font-size: 2rem;
             margin-bottom: 1rem;
+            text-shadow: 2px 2px #000;
         }
 
         ul {
@@ -71,11 +78,14 @@
         }
 
         .w3-table-all {
-            border: 1px solid #ddd;
+            border: 3px solid #0ff;
+            background: #111;
+            color: #0ff;
+            font-size: 0.9rem;
         }
 
         .w3-table-all th {
-            background: #007bff;
+            background: #ff00ff;
             color: white;
         }
 
@@ -85,35 +95,44 @@
         }
 
         .w3-table-all tr:nth-child(even) {
-            background: #f8f9fa;
+            background: #333;
         }
-      
+
         img {
             display: block;
-            margin: 1rem 0 1rem 0;
+            margin: 1rem auto;
             border-radius: 10px;
+            border: 3px solid #0ff;
         }
 
         footer {
-            background: linear-gradient(90deg, #007bff, #00bcd4);
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
             color: white;
             text-align: center;
             padding: 1.5rem 0;
             margin-top: 2rem;
+            border-top: 5px solid #0ff;
         }
 
         footer p {
             margin: 0;
+            font-size: 0.9rem;
+            text-shadow: 1px 1px #000;
+        }
+
+        @font-face {
+            font-family: 'Press Start 2P';
+            src: url('https://fonts.gstatic.com/s/pressstart2p/v12/e3t4euO8V5UmzJVzZPZsZnF1Q8jEMtyvq-o.woff2') format('woff2');
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Ella's Personal Website</h1>
+        <h1>Ella's Game Portal</h1>
     </header>
 
     <nav class="w3-bar w3-border">
-        <a href="#about" class="w3-bar-item w3-button">About Me</a>
+        <a href="#about" class="w3-bar-item w3-button">About</a>
         <a href="#hobbies" class="w3-bar-item w3-button">Hobbies</a>
         <a href="#projects" class="w3-bar-item w3-button">Projects</a>
         <a href="#contact" class="w3-bar-item w3-button">Contact</a>
@@ -122,55 +141,55 @@
     <section id="about">
         <h2>About Me</h2>
         <img src="about-me.jpg" alt="A photo of me" style="width: 450px; height: 300px;">
-        <p>Hello! I'm a passionate GBDA student at the University of Waterloo and a creative thinker. I enjoy learning new design concepts and building projects that solve real-world problems. Welcome to my personal website!</p>
+        <p>Welcome to my game-themed portal! I'm Ella, a passionate creator who loves blending technology and creativity. Let's explore!</p>
     </section>
 
     <section id="hobbies">
         <h2>Hobbies</h2>
         <img src="hobbies.jpg" alt="Image representing hobbies" style="width: 200px; height: 300px;">
-        <p>In my free time, I enjoy:</p>
+        <p>When I'm not gaming, I enjoy:</p>
         <ul>
-            <li>Dancing</li>
-            <li>Video editing</li>
-            <li>Reading fictional novels</li>
-            <li>Sleeping!</li>
+            <li>Pixel art design</li>
+            <li>Level editing</li>
+            <li>Playing retro games</li>
+            <li>Exploring game lore!</li>
         </ul>
     </section>
 
     <section id="projects">
-    <h2>Projects</h2>
-    <div class="w3-responsive">
-        <table class="w3-table-all">
-            <tr>
-                <th>Image</th>
-                <th>Project Name</th>
-                <th>Description</th>
-                <th>Link</th>
-            </tr>
-            <tr>
-                <td><img src="project1.jpg" alt="Image of What Kind of Fool Am I" style="width: 150px; height: 100px;"></td>
-                <td>What Kind of Fool Am I</td>
-                <td>A self-choreographed solo</td>
-                <td><a href="https://youtu.be/nr6c-ypJx_w">Visit</a></td>
-            </tr>
-            <tr>
-                <td><img src="project2.jpg" alt="Image of Moodbloom" style="width: 150px; height: 100px;"></td>
-                <td>Moodbloom</td>
-                <td>A simple app that tracks your mood</td>
-                <td><a href="https://www.figma.com/design/wYklmzNcksPWUzWinRUMZI/Li_Ella_M3?node-id=0-1&t=xtnZGUugjgjGLjCh-1">Visit</a></td>
-            </tr>
-        </table>
-    </div>
-</section>
+        <h2>Projects</h2>
+        <div class="w3-responsive">
+            <table class="w3-table-all">
+                <tr>
+                    <th>Image</th>
+                    <th>Project Name</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td><img src="project1.jpg" alt="What Kind of Fool Am I" style="width: 150px; height: 100px;"></td>
+                    <td>What Kind of Fool Am I</td>
+                    <td>A self-choreographed solo in a virtual arena</td>
+                    <td><a href="https://youtu.be/nr6c-ypJx_w" style="color: #ff00ff;">Visit</a></td>
+                </tr>
+                <tr>
+                    <td><img src="project2.jpg" alt="Moodbloom" style="width: 150px; height: 100px;"></td>
+                    <td>Moodbloom</td>
+                    <td>An 8-bit app to track your mood levels</td>
+                    <td><a href="https://www.figma.com/design/wYklmzNcksPWUzWinRUMZI/Li_Ella_M3?node-id=0-1&t=xtnZGUugjgjGLjCh-1" style="color: #ff00ff;">Visit</a></td>
+                </tr>
+            </table>
+        </div>
+    </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
+        <h2>Contact</h2>
         <img src="contact.jpg" alt="Contact icon" style="width: 200px; height: 200px;">
-        <p>If you'd like to get in touch, feel free to send me an email: <a href="mailto:your_email@uwaterloo.ca">e225li@uwaterloo.ca</a></p>
+        <p>Get in touch with me at <a href="mailto:e225li@uwaterloo.ca" style="color: #ff00ff;">e225li@uwaterloo.ca</a></p>
     </section>
 
     <footer>
-        <p>&copy; 2024 My Personal Website</p>
+        <p>&copy; 2024 Ella's Game Portal</p>
     </footer>
 </body>
 </html>
