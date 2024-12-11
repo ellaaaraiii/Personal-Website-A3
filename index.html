@@ -6,26 +6,30 @@
     <title>Ella's Personal Website</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-        body {
-            font-family: 'Lora', serif; /* Elegant serif font */
-            background: linear-gradient(135deg, #eef2ff, #dfe7fd); /* Muted gradient with soft periwinkle tones */
-            color: #4a4a4a; /* Muted, readable text color */
+        /* Global Reset */
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, #eef2ff, #dfe7fd);
+            color: #4a4a4a;
             line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #a7c7e7, #cddffd); /* Soft periwinkle gradient */
+            background: linear-gradient(135deg, #a7c7e7, #cddffd);
             color: #4a4a4a;
             text-align: center;
             padding: 3rem 0;
-            border-bottom: 3px solid #a7c7e7; /* Periwinkle border */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            border-bottom: 3px solid #a7c7e7;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-family: 'Lora', serif; /* Elegant serif font for a classy feel */
             font-size: 3.5rem;
             margin: 0;
             font-weight: 700;
@@ -36,7 +40,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: #f8f9ff; /* Light muted background for nav */
+            background: #f8f9ff;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -50,7 +54,7 @@
             font-weight: 600;
             padding: 1.5rem;
             text-transform: uppercase;
-            color: #5e81ac; /* Periwinkle accent color */
+            color: #5e81ac;
             transition: background 0.3s, color 0.3s;
         }
 
@@ -64,20 +68,20 @@
             margin: 4rem auto;
             max-width: 900px;
             padding: 2rem;
-            background: #ffffff; /* White background for readability */
-            border: 2px solid #a7c7e7; /* Periwinkle border */
+            background: #ffffff;
+            border: 2px solid #a7c7e7;
             border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             position: relative;
-            clear: both; /* Clear any floats in the section */
+            clear: both; /* Clear floated elements */
+            overflow: hidden; /* Prevent floating elements from causing overflow */
         }
 
         section h2 {
-            font-family: 'Lora', serif; /* Elegant serif font for headings */
-            color: #5e81ac;
             font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 600;
+            color: #5e81ac;
         }
 
         ul {
@@ -87,8 +91,8 @@
         }
 
         .w3-table-all {
-            border: 2px solid #a7c7e7; /* Periwinkle table border */
-            background: #fafafa; /* Light gray background for table */
+            border: 2px solid #a7c7e7;
+            background: #fafafa;
             color: #4a4a4a;
             font-size: 1rem;
             border-radius: 8px;
@@ -106,25 +110,24 @@
         }
 
         .w3-table-all tr:nth-child(even) {
-            background: #f6f6f6; /* Light alternating row colors */
+            background: #f6f6f6;
         }
 
         img {
             display: block;
             margin: 1rem auto;
             border-radius: 12px;
-            border: 3px solid #5e81ac; /* Periwinkle border around images */
+            border: 3px solid #5e81ac;
         }
 
         footer {
-            background: linear-gradient(135deg, #a7c7e7, #cddffd); /* Soft muted gradient for footer */
+            background: linear-gradient(135deg, #a7c7e7, #cddffd);
             color: #4a4a4a;
             text-align: center;
             padding: 2rem 0;
-            margin-top: 0; /* Ensure no extra space above the footer */
             border-top: 3px solid #a7c7e7;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow at the top of the footer */
-            clear: both; /* Ensure the footer clears any floating elements above it */
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            clear: both; /* Ensure that the footer clears any floats */
         }
 
         footer p {
@@ -132,6 +135,7 @@
             font-size: 1rem;
         }
 
+        /* Font Import */
         @font-face {
             font-family: 'Lora';
             src: url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
