@@ -10,9 +10,7 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;  /* Ensure full height for body and html */
-            overflow-x: hidden; /* Prevent horizontal scroll */
-            box-sizing: border-box; /* Include padding and border in element's total width and height */
+            height: 100%;
         }
 
         body {
@@ -20,9 +18,7 @@
             background: linear-gradient(135deg, #eef2ff, #dfe7fd);
             color: #4a4a4a;
             line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100%; /* Ensures the body takes full height */
+            display: block;
         }
 
         header {
@@ -78,8 +74,8 @@
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             position: relative;
-            clear: both;
-            overflow: hidden;
+            clear: both; /* Clear floated elements */
+            overflow: hidden; /* Prevent floating elements from causing overflow */
         }
 
         section h2 {
@@ -129,12 +125,11 @@
             background: linear-gradient(135deg, #a7c7e7, #cddffd);
             color: #4a4a4a;
             text-align: center;
-            padding: 1rem 0;
-            margin-top: 0;
-            border-top: none;
-            box-shadow: none;
-            clear: both;
-            width: 100%;
+            padding: 1rem 0; /* Reduced padding to decrease height */
+            border-top: 3px solid #a7c7e7;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            clear: both; /* Ensure that the footer clears any floats */
+            margin-top: 0; /* Remove any margin at the top of the footer */
         }
 
         footer p {
@@ -146,11 +141,6 @@
         @font-face {
             font-family: 'Lora';
             src: url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
-        }
-
-        /* Ensure the main content takes the rest of the page space */
-        main {
-            flex: 1;
         }
     </style>
 </head>
@@ -166,58 +156,56 @@
         <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     </nav>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <img src="about-me.jpg" alt="A photo of me" style="width: 450px; height: 300px;">
-            <p>Welcome to my game-themed portal! I'm Ella, a passionate creator who loves doing passion projects and creativity. Let's explore!</p>
-        </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="about-me.jpg" alt="A photo of me" style="width: 450px; height: 300px;">
+        <p>Welcome to my game-themed portal! I'm Ella, a passionate creator who loves doing passion projects and creativity. Let's explore!</p>
+    </section>
 
-        <section id="hobbies">
-            <h2>Hobbies</h2>
-            <img src="hobbies.jpg" alt="Image representing hobbies" 
-             style="width: 200px; height: 300px; border-radius: 12px; border: 3px solid #5e81ac; float: right; margin-left: 1.5rem; margin-bottom: 1rem;">
-            <p>When I'm not gaming, I enjoy:</p>
-            <ul>
-                <li>Designing</li>
-                <li>Video editing</li>
-                <li>Playing video games</li>
-                <li>Dancing!</li>
-            </ul>
-        </section>
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <img src="hobbies.jpg" alt="Image representing hobbies" 
+         style="width: 200px; height: 300px; border-radius: 12px; border: 3px solid #5e81ac; float: right; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <p>When I'm not gaming, I enjoy:</p>
+        <ul>
+            <li>Designing</li>
+            <li>Video editing</li>
+            <li>Playing video games</li>
+            <li>Dancing!</li>
+        </ul>
+    </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="w3-responsive">
-                <table class="w3-table-all">
-                    <tr>
-                        <th>Image</th>
-                        <th>Project Name</th>
-                        <th>Description</th>
-                        <th>Link</th>
-                    </tr>
-                    <tr>
-                        <td><img src="project1.jpg" alt="What Kind of Fool Am I" style="width: 150px; height: 100px;"></td>
-                        <td>What Kind of Fool Am I</td>
-                        <td>A self-choreographed solo</td>
-                        <td><a href="https://youtu.be/nr6c-ypJx_w" style="color: #5e81ac;">Visit</a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="project2.jpg" alt="Moodbloom" style="width: 150px; height: 100px;"></td>
-                        <td>Moodbloom</td>
-                        <td>A mood-tracking app to track your mood levels</td>
-                        <td><a href="https://www.figma.com/proto/wYklmzNcksPWUzWinRUMZI/Li_Ella_M3?node-id=1-2&starting-point-node-id=1%3A2">Visit</a></td>
-                    </tr>
-                </table>
-            </div>
-        </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="w3-responsive">
+            <table class="w3-table-all">
+                <tr>
+                    <th>Image</th>
+                    <th>Project Name</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td><img src="project1.jpg" alt="What Kind of Fool Am I" style="width: 150px; height: 100px;"></td>
+                    <td>What Kind of Fool Am I</td>
+                    <td>A self-choreographed solo</td>
+                    <td><a href="https://youtu.be/nr6c-ypJx_w" style="color: #5e81ac;">Visit</a></td>
+                </tr>
+                <tr>
+                    <td><img src="project2.jpg" alt="Moodbloom" style="width: 150px; height: 100px;"></td>
+                    <td>Moodbloom</td>
+                    <td>A mood-tracking app to track your mood levels</td>
+                    <td><a href="https://www.figma.com/proto/wYklmzNcksPWUzWinRUMZI/Li_Ella_M3?node-id=1-2&starting-point-node-id=1%3A2">Visit</a></td>
+                </tr>
+            </table>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <img src="contact.jpg" alt="Contact icon" style="width: 200px; height: 200px;">
-            <p>Get in touch with me at <a href="mailto:e225li@uwaterloo.ca" style="color: #5e81ac;">e225li@uwaterloo.ca</a></p>
-        </section>
-    </main>
+    <section id="contact">
+        <h2>Contact</h2>
+        <img src="contact.jpg" alt="Contact icon" style="width: 200px; height: 200px;">
+        <p>Get in touch with me at <a href="mailto:e225li@uwaterloo.ca" style="color: #5e81ac;">e225li@uwaterloo.ca</a></p>
+    </section>
 
     <footer>
         <p>&copy; 2024 Ella's Personal Website</p>
