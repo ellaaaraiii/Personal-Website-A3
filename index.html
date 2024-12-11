@@ -7,26 +7,36 @@
     <!-- created by Ella Li on Dec 10, 2024 -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
+        html, body {
+            height: 100%; /* Make sure the HTML and body elements take up the full height of the viewport */
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-    font-family: 'Lora', serif;
-    background: linear-gradient(135deg, #eef2ff, #dfe7fd);
-    color: #4a4a4a;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, #eef2ff, #dfe7fd);
+            color: #4a4a4a;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        main {
+            flex: 1; /* This ensures the main content takes up all available space */
+        }
 
         header {
-            background: linear-gradient(135deg, #a7c7e7, #cddffd); 
+            background: linear-gradient(135deg, #a7c7e7, #cddffd);
             color: #4a4a4a;
             text-align: center;
             padding: 3rem 0;
-            border-bottom: 3px solid #a7c7e7; 
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            border-bottom: 3px solid #a7c7e7;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-family: 'Lora', serif; 
+            font-family: 'Lora', serif;
             font-size: 3.5rem;
             margin: 0;
             font-weight: 700;
@@ -37,7 +47,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: #f8f9ff; 
+            background: #f8f9ff;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -51,7 +61,7 @@
             font-weight: 600;
             padding: 1.5rem;
             text-transform: uppercase;
-            color: #5e81ac; 
+            color: #5e81ac;
             transition: background 0.3s, color 0.3s;
         }
 
@@ -65,15 +75,15 @@
             margin: 4rem auto;
             max-width: 900px;
             padding: 2rem;
-            background: #ffffff; 
-            border: 2px solid #a7c7e7; 
+            background: #ffffff;
+            border: 2px solid #a7c7e7;
             border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             position: relative;
         }
 
         section h2 {
-            font-family: 'Lora', serif; 
+            font-family: 'Lora', serif;
             color: #5e81ac;
             font-size: 2.5rem;
             margin-bottom: 1rem;
@@ -87,8 +97,8 @@
         }
 
         .w3-table-all {
-            border: 2px solid #a7c7e7; 
-            background: #fafafa; 
+            border: 2px solid #a7c7e7;
+            background: #fafafa;
             color: #4a4a4a;
             font-size: 1rem;
             border-radius: 8px;
@@ -106,25 +116,25 @@
         }
 
         .w3-table-all tr:nth-child(even) {
-            background: #f6f6f6; 
+            background: #f6f6f6;
         }
 
         img {
             display: block;
             margin: 1rem auto;
             border-radius: 12px;
-            border: 3px solid #5e81ac; 
+            border: 3px solid #5e81ac;
         }
 
         footer {
-    background: linear-gradient(135deg, #a7c7e7, #cddffd);
-    color: #4a4a4a;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: auto; /* Ensure footer stays at the bottom */
-    border-top: 3px solid #a7c7e7;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-}
+            background: linear-gradient(135deg, #a7c7e7, #cddffd);
+            color: #4a4a4a;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: auto;
+            border-top: 3px solid #a7c7e7;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
 
         footer p {
             margin: 0;
@@ -149,56 +159,57 @@
         <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="about-me.jpg" alt="A photo of me" style="width: 450px; height: 300px;">
-        <p>Welcome to my personal website! I'm Ella, a passionate creator who loves doing passion projects and explore my creativity. Let's find out more about myself!</p>
-    </section>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="about-me.jpg" alt="A photo of me" style="width: 450px; height: 300px;">
+            <p>Welcome to my personal website! I'm Ella, a passionate creator who loves doing passion projects and exploring my creativity. Let's find out more about myself!</p>
+        </section>
 
-    <section id="hobbies" style="overflow: hidden; font-size: 1.2rem;">
-        <h2>Hobbies</h2>
-        <img src="hobbies.jpg" alt="Image representing hobbies" 
-         style="width: 200px; height: 300px; border-radius: 12px; border: 3px solid #5e81ac; float: right; margin-left: 1.5rem; margin-bottom: 1rem;">
-        <p>When I'm not busy, I enjoy:</p>
-        <ul>
-            <li>Designing</li>
-            <li>Video editing</li>
-            <li>Playing video games</li>
-            <li>Dancing!</li>
-        </ul>
-    </section>
+        <section id="hobbies" style="overflow: hidden; font-size: 1.2rem;">
+            <h2>Hobbies</h2>
+            <img src="hobbies.jpg" alt="Image representing hobbies" style="width: 200px; height: 300px; border-radius: 12px; border: 3px solid #5e81ac; float: right; margin-left: 1.5rem; margin-bottom: 1rem;">
+            <p>When I'm not busy, I enjoy:</p>
+            <ul>
+                <li>Designing</li>
+                <li>Video editing</li>
+                <li>Playing video games</li>
+                <li>Dancing!</li>
+            </ul>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="w3-responsive">
-            <table class="w3-table-all">
-                <tr>
-                    <th>Image</th>
-                    <th>Project Name</th>
-                    <th>Description</th>
-                    <th>Link</th>
-                </tr>
-                <tr>
-                    <td><img src="project1.jpg" alt="What Kind of Fool Am I" style="width: 150px; height: 100px;"></td>
-                    <td>What Kind of Fool Am I</td>
-                    <td>A self-choreographed solo</td>
-                    <td><a href="https://youtu.be/nr6c-ypJx_w" style="color: #5e81ac;">Visit</a></td>
-                </tr>
-                <tr>
-                    <td><img src="project2.jpg" alt="Moodbloom" style="width: 150px; height: 100px;"></td>
-                    <td>Moodbloom</td>
-                    <td>A mood-tracking app to track your mood levels</td>
-                    <td><a href="https://www.figma.com/design/wYklmzNcksPWUzWinRUMZI/Li_Ella_M3?node-id=0-1&t=xtnZGUugjgjGLjCh-1" style="color: #5e81ac;">Visit</a></td>
-                </tr>
-            </table>
-        </div>
-    </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="w3-responsive">
+                <table class="w3-table-all">
+                    <tr>
+                        <th>Image</th>
+                        <th>Project Name</th>
+                        <th>Description</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr>
+                        <td><img src="project1.jpg" alt="What Kind of Fool Am I" style="width: 150px; height: 100px;"></td>
+                        <td>What Kind of Fool Am I</td>
+                        <td>A self-choreographed solo</td>
+                        <td><a href="https://youtu.be/nr6c-ypJx_w" style="color: #5e81ac;">Visit</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="project2.jpg" alt="Moodbloom" style="width: 150px; height: 100px;"></td>
+                        <td>Moodbloom</td>
+                        <td>A mood-tracking app to track your mood levels</td>
+                        <td><a href="https://www.figma.com/design/wYklmzNcksPWUzWinRUMZI/Li_Ella_M3?node-id=0-1&t=xtnZGUugjgjGLjCh-1" style="color: #5e81ac;">Visit</a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <img src="contact.jpg" alt="Contact icon" style="width: 200px; height: 200px;">
-        <p>Get in touch with me at <a href="mailto:e225li@uwaterloo.ca" style="color: #5e81ac;">e225li@uwaterloo.ca</a></p>
-    </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <img src="contact.jpg" alt="Contact icon" style="width: 200px; height: 200px;">
+            <p>Get in touch with me at <a href="mailto:e225li@uwaterloo.ca" style="color: #5e81ac;">e225li@uwaterloo.ca</a></p>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 Ella's Personal Website</p>
