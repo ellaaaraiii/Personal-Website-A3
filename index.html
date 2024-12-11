@@ -7,23 +7,22 @@
     <!-- created by Ella Li on Dec 10, 2024 -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
+        /* Ensure body and html cover full height */
         html, body {
-            height: 100%; /* Make sure the HTML and body elements take up the full height of the viewport */
+            height: 100%;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
         }
 
         body {
             font-family: 'Lora', serif;
             background: linear-gradient(135deg, #eef2ff, #dfe7fd);
             color: #4a4a4a;
-            display: flex;
-            flex-direction: column;
             line-height: 1.6;
-        }
-
-        main {
-            flex: 1; /* This ensures the main content takes up all available space */
+            flex: 1;
+            overflow: hidden;
         }
 
         header {
@@ -71,15 +70,21 @@
             cursor: pointer;
         }
 
+        /* Main content with enough space */
+        main {
+            flex: 1;
+            padding: 2rem;
+            overflow: auto;
+        }
+
         section {
-            margin: 4rem auto;
+            margin: 2rem auto;
             max-width: 900px;
             padding: 2rem;
             background: #ffffff;
             border: 2px solid #a7c7e7;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            position: relative;
         }
 
         section h2 {
@@ -90,12 +95,7 @@
             font-weight: 600;
         }
 
-        ul {
-            list-style-type: square;
-            padding-left: 1.5rem;
-            color: #4a4a4a;
-        }
-
+        /* Table Styles */
         .w3-table-all {
             border: 2px solid #a7c7e7;
             background: #fafafa;
@@ -131,9 +131,9 @@
             color: #4a4a4a;
             text-align: center;
             padding: 2rem 0;
-            margin-top: auto;
             border-top: 3px solid #a7c7e7;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: auto;
         }
 
         footer p {
